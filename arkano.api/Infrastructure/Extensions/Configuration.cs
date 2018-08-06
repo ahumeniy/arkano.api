@@ -7,7 +7,7 @@
 
     public static class Configuration
     {
-        public static string BasePath => $@"{Directory.GetCurrentDirectory()}\Configuration";
+        public static string BasePath => $@"{Directory.GetCurrentDirectory()}/Configuration";
         public static IConfiguration LoadTenantConfiguration()
         {
             var builder = new ConfigurationBuilder()
