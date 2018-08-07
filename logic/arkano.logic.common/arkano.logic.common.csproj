@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\common\arkano.common.domain\arkano.common.domain.csproj" />
+    <ProjectReference Include="..\..\common\arkano.common.models\arkano.common.interfaces.csproj" />
+    <ProjectReference Include="..\arkano.logic.interfaces\arkano.logic.interfaces.csproj" />
+  </ItemGroup>
+
+</Project>

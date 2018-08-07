@@ -13,15 +13,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "data", "data", "{4159BBD1-F
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "logic", "logic", "{0A849647-A003-4963-AFBC-FF3C2D3DB0A7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "arkano.common.configuration", "common\arkano.common.configuration\arkano.common.configuration.csproj", "{4195E3FB-2FD8-476F-B733-2FDCCE2BCAD6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "arkano.common.configuration", "common\arkano.common.configuration\arkano.common.configuration.csproj", "{4195E3FB-2FD8-476F-B733-2FDCCE2BCAD6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "arkano.common.interfaces", "common\arkano.common.models\arkano.common.interfaces.csproj", "{2A91529D-BCA2-4ADA-B394-4F01F2496422}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "arkano.common.interfaces", "common\arkano.common.models\arkano.common.interfaces.csproj", "{2A91529D-BCA2-4ADA-B394-4F01F2496422}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "arkano.data.interfaces", "data\arkano.data.interfaces\arkano.data.interfaces.csproj", "{A6ABB6C4-CCAA-4ED6-ACBA-BE3DD94683E7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "arkano.data.interfaces", "data\arkano.data.interfaces\arkano.data.interfaces.csproj", "{A6ABB6C4-CCAA-4ED6-ACBA-BE3DD94683E7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "arkano.common.constants", "common\arkano.common.constants\arkano.common.constants.csproj", "{B21E28FD-CB9C-4213-A962-ACE68FE80F1E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "arkano.common.constants", "common\arkano.common.constants\arkano.common.constants.csproj", "{B21E28FD-CB9C-4213-A962-ACE68FE80F1E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "arkano.logic.interfaces", "logic\arkano.logic.interfaces\arkano.logic.interfaces.csproj", "{ED829BBB-52AC-4AF8-A3C9-C289B9A7809C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "arkano.logic.interfaces", "logic\arkano.logic.interfaces\arkano.logic.interfaces.csproj", "{ED829BBB-52AC-4AF8-A3C9-C289B9A7809C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "arkano.common.domain", "common\arkano.common.domain\arkano.common.domain.csproj", "{68F04A5E-E8B7-46AB-8C55-9B1F746CF831}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "arkano.logic.common", "logic\arkano.logic.common\arkano.logic.common.csproj", "{ED4630A8-0667-4D73-9A02-E4AD2A261A58}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +61,14 @@ Global
 		{ED829BBB-52AC-4AF8-A3C9-C289B9A7809C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ED829BBB-52AC-4AF8-A3C9-C289B9A7809C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ED829BBB-52AC-4AF8-A3C9-C289B9A7809C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68F04A5E-E8B7-46AB-8C55-9B1F746CF831}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68F04A5E-E8B7-46AB-8C55-9B1F746CF831}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68F04A5E-E8B7-46AB-8C55-9B1F746CF831}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68F04A5E-E8B7-46AB-8C55-9B1F746CF831}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED4630A8-0667-4D73-9A02-E4AD2A261A58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED4630A8-0667-4D73-9A02-E4AD2A261A58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED4630A8-0667-4D73-9A02-E4AD2A261A58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED4630A8-0667-4D73-9A02-E4AD2A261A58}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -67,6 +79,8 @@ Global
 		{A6ABB6C4-CCAA-4ED6-ACBA-BE3DD94683E7} = {4159BBD1-F20C-40A4-8C95-18E20B9CA7D9}
 		{B21E28FD-CB9C-4213-A962-ACE68FE80F1E} = {BBC3E5C5-6E08-4E0C-9182-4C719212B8B5}
 		{ED829BBB-52AC-4AF8-A3C9-C289B9A7809C} = {0A849647-A003-4963-AFBC-FF3C2D3DB0A7}
+		{68F04A5E-E8B7-46AB-8C55-9B1F746CF831} = {BBC3E5C5-6E08-4E0C-9182-4C719212B8B5}
+		{ED4630A8-0667-4D73-9A02-E4AD2A261A58} = {0A849647-A003-4963-AFBC-FF3C2D3DB0A7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E3D953AB-5CF5-4FC9-A53F-2F2FBB79547C}

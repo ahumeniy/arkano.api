@@ -2,7 +2,7 @@
 {
     using arkano.common.interfaces;
 
-    public interface IRepository<T> where T : class, IModel
+    public interface IRepository<TModel> where TModel : class, IModel
     {
     }
 }
