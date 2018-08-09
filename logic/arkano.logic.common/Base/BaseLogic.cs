@@ -1,4 +1,5 @@
-﻿using arkano.common.interfaces;
+﻿using arkano.common.configuration;
+using arkano.common.interfaces;
 using arkano.logic.interfaces;
 using System;
 using System.Collections.Generic;
@@ -26,6 +27,10 @@ namespace arkano.logic.common.Base
         public virtual void New(TModel model)
         {
             throw new NotImplementedException();
+        }
+
+        public void SetContext(ArkanoContext context)
+        {
         }
 
         public virtual void Update(TModel model)
