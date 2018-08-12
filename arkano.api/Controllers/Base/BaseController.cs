@@ -31,44 +31,44 @@ namespace arkano.api.Controllers.Base
 
         // GET: api/Base
         [HttpGet]
-        public IList<TModel> Get()
+        public Task<IList<TModel>> Get()
         {
             return this.GetLogic().All();
         }
 
         // GET: api/Base/5
         [HttpGet("{id}", Name = "Get")]
-        public TModel Get(int id)
+        public Task<TModel> Get(int id)
         {
             return this.GetLogic().Get(id);
         }
 
         // POST: api/Base
         [HttpPost]
-        public void Post([FromBody] TModel value)
+        public Task Post([FromBody] TModel value)
         {
-            this.GetLogic().New(value);
+            return this.GetLogic().New(value);
         }
 
         // PUT: api/Base/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] TModel value)
+        public Task Put(int id, [FromBody] TModel value)
         {
-            this.GetLogic().Update(value);
+            return this.GetLogic().Update(value);
         }
 
         // PATCH: api/Base/5
         [HttpPatch("{id}")]
-        public void Patch(int id, [FromBody] TModel value)
+        public Task Patch(int id, [FromBody] TModel value)
         {
-            this.GetLogic().Update(value);
+            return this.GetLogic().Update(value);
         }
 
         // DELETE: api/ApiWithActions/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public Task Delete(int id)
         {
-            this.GetLogic().Delete(id);
+            return this.GetLogic().Delete(id);
         }
 
         protected ArkanoContext GetContext()

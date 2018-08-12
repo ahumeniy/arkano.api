@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\common\arkano.common.configuration\arkano.common.configuration.csproj" />
+    <ProjectReference Include="..\..\common\arkano.common.domain\arkano.common.domain.csproj" />
     <ProjectReference Include="..\..\common\arkano.common.models\arkano.common.interfaces.csproj" />
   </ItemGroup>
 

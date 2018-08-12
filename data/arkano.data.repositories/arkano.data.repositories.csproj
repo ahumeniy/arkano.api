@@ -1,11 +1,11 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\arkano.common.models\arkano.common.interfaces.csproj" />
+    <ProjectReference Include="..\arkano.data.interfaces\arkano.data.interfaces.csproj" />
   </ItemGroup>
 
 </Project>
