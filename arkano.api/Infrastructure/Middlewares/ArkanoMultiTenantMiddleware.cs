@@ -22,7 +22,7 @@
             this.Logger = logger;
         }
 
-        public async Task Invoke(HttpContext context, IOptionsSnapshot<TenantsConfiguration> tenantsConfiguration)
+        public async Task Invoke(HttpContext context, IOptions<TenantsConfiguration> tenantsConfiguration)
         {
             this.TenantsConfiguration = tenantsConfiguration.Value;
             using (this.Logger.BeginScope("TenantResolverMiddleware"))

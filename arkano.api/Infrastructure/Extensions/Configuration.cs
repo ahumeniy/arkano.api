@@ -20,5 +20,10 @@
         {
             return app.UseMiddleware<ArkanoMultiTenantMiddleware>();
         }
+
+        public static IApplicationBuilder UseArkanoLoggerMiddleware(this IApplicationBuilder app)
+        {
+            return app.UseMiddleware<ArkanoLoggerMiddleware>();
+        }
     }
 }

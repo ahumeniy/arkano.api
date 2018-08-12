@@ -31,6 +31,7 @@
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
+            services.AddCors();
             services.AddOptions();
             services.Configure<TenantsConfiguration>(this.TenantConfiguration);
             services.AddMvc();
@@ -49,10 +50,17 @@
                 app.UseHsts();
             }
 
+            app.UseCors(builder => builder
+                .AllowAnyHeader()
+                .AllowAnyMethod()
+                .AllowAnyOrigin()
+                .AllowCredentials()
+            );
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
             app.UseMultiTenantMiddleware();
+            app.UseArkanoLoggerMiddleware();
 
             app.UseMvc(routes =>
             {
