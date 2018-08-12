@@ -1,32 +1,31 @@
-﻿using arkano.common.configuration;
-using arkano.common.domain;
-using arkano.common.interfaces;
-using arkano.data.interfaces;
-using arkano.logic.common.Factories;
-using arkano.logic.interfaces;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace arkano.logic.common.Base
+﻿namespace arkano.logic.common.Base
 {
-    public class BaseLogic<TModel> : ILogic<TModel> where TModel : class, IModel
+    using System.Collections.Generic;
+    using System.Threading.Tasks;
+    using arkano.common.configuration;
+    using arkano.common.domain;
+    using arkano.common.interfaces;
+    using arkano.data.interfaces;
+    using arkano.logic.common.Factories;
+    using arkano.logic.interfaces;
+
+    public class BaseLogic<TModel> : ILogic<TModel> 
+        where TModel : class, IModel
     {
         public BaseLogic(IRepository<TModel> repository)
         {
             this.Repository = repository;
-            this.factoryDmmyTestModel = new LogicFactory<DummyTestModel, DummyTestLogic>();
-            this.factoryOtroDummyTestModel = new LogicFactory<OtroDummyTestModel, OtroDummyTestLogic>();
+            this.FactoryDummyTestModel = new LogicFactory<DummyTestModel, DummyTestLogic>();
+            this.FactoryOtroDummyTestModel = new LogicFactory<OtroDummyTestModel, OtroDummyTestLogic>();
         }
 
         public ArkanoContext Context { get; private set; }
+        
+        public ILogicFactory<DummyTestModel> FactoryDummyTestModel { get; private set; }
+
+        public ILogicFactory<OtroDummyTestModel> FactoryOtroDummyTestModel { get; private set; }
 
         protected IRepository<TModel> Repository { get; }
-
-        public ILogicFactory<DummyTestModel> factoryDmmyTestModel { get; }
-
-        public ILogicFactory<OtroDummyTestModel> factoryOtroDummyTestModel { get; }
 
         public virtual Task<IList<TModel>> All()
         {

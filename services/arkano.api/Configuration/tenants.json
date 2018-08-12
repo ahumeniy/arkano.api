@@ -1,0 +1,13 @@
+﻿{
+  "default": "Arkano",
+  "tenants": [
+    {
+      "id": "Arkano",
+      "subdomain": "arkano1"
+    },
+    {
+      "id": "Otro",
+      "subdomain": "arkano2"
+    }
+  ]
+}

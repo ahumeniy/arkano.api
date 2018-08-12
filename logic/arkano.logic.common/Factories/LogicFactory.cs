@@ -5,7 +5,7 @@
     using arkano.logic.interfaces;
 
     public class LogicFactory<TModel, TLogic> : ILogicFactory<TModel>
-        where TModel: class, IModel
+        where TModel : class, IModel
         where TLogic : ILogic<TModel>, new()
     {
         public ILogic<TModel> GetLogic(ArkanoContext context)

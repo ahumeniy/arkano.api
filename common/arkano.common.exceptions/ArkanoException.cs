@@ -1,7 +1,7 @@
-﻿using System;
-
-namespace arkano.common.exceptions
+﻿namespace arkano.common.exceptions
 {
+    using System;
+
     public class ArkanoException : Exception
     {
     }

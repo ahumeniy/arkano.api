@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <DockerComposeProjectPath>..\docker-compose.dcproj</DockerComposeProjectPath>
+    <UserSecretsId>eb42f41c-19f7-4ceb-950e-ae3e69e72ac4</UserSecretsId>
+    <CodeAnalysisRuleSet>../../project.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <AdditionalFiles Include="../../stylecop.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="StyleCop.Analyzers" Version="1.1.0-beta008" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\common\arkano.common.exceptions\arkano.common.exceptions.csproj" />
+    <ProjectReference Include="..\..\common\arkano.common.interfaces\arkano.common.interfaces.csproj" />
+    <ProjectReference Include="..\..\logic\arkano.logic.common\arkano.logic.common.csproj" />
+  </ItemGroup>
+
+</Project>

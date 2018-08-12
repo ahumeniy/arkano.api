@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2042
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "arkano.api", "arkano.api\arkano.api.csproj", "{EA1E56DF-6EFF-45DB-9953-95EC39EB67D0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "arkano.api", "services\arkano.api\arkano.api.csproj", "{EA1E56DF-6EFF-45DB-9953-95EC39EB67D0}"
+	ProjectSection(ProjectDependencies) = postProject
+		{ED4630A8-0667-4D73-9A02-E4AD2A261A58} = {ED4630A8-0667-4D73-9A02-E4AD2A261A58}
+		{ED829BBB-52AC-4AF8-A3C9-C289B9A7809C} = {ED829BBB-52AC-4AF8-A3C9-C289B9A7809C}
+	EndProjectSection
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{1CD3443C-8FE8-4D21-A4D6-9C4BE2360BE4}"
 EndProject
@@ -15,7 +19,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "logic", "logic", "{0A849647
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "arkano.common.configuration", "common\arkano.common.configuration\arkano.common.configuration.csproj", "{4195E3FB-2FD8-476F-B733-2FDCCE2BCAD6}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "arkano.common.interfaces", "common\arkano.common.models\arkano.common.interfaces.csproj", "{2A91529D-BCA2-4ADA-B394-4F01F2496422}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "arkano.common.interfaces", "common\arkano.common.interfaces\arkano.common.interfaces.csproj", "{2A91529D-BCA2-4ADA-B394-4F01F2496422}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "arkano.data.interfaces", "data\arkano.data.interfaces\arkano.data.interfaces.csproj", "{A6ABB6C4-CCAA-4ED6-ACBA-BE3DD94683E7}"
 EndProject
@@ -27,11 +31,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "arkano.common.domain", "com
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "arkano.logic.common", "logic\arkano.logic.common\arkano.logic.common.csproj", "{ED4630A8-0667-4D73-9A02-E4AD2A261A58}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "arkano.logic.validations", "logic\arkano.logic.domain\arkano.logic.domain\arkano.logic.validations.csproj", "{ABDA0AB2-A745-46D1-9F41-55983777904B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "arkano.logic.validations", "logic\arkano.logic.validations\arkano.logic.validations.csproj", "{ABDA0AB2-A745-46D1-9F41-55983777904B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "arkano.common.exceptions", "common\arkano.common.exceptions\arkano.common.exceptions.csproj", "{AF454B07-CE69-4FED-A9B0-73F202E06DCD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "arkano.common.exceptions", "common\arkano.common.exceptions\arkano.common.exceptions.csproj", "{AF454B07-CE69-4FED-A9B0-73F202E06DCD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "arkano.data.repositories", "data\arkano.data.repositories\arkano.data.repositories.csproj", "{DD19E346-E81A-4742-9B68-0807C8CFCC2A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "arkano.data.repositories", "data\arkano.data.repositories\arkano.data.repositories.csproj", "{DD19E346-E81A-4742-9B68-0807C8CFCC2A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "services", "services", "{A362B400-5368-4008-8649-901B2FE5D48E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -92,6 +98,7 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
+		{EA1E56DF-6EFF-45DB-9953-95EC39EB67D0} = {A362B400-5368-4008-8649-901B2FE5D48E}
 		{4195E3FB-2FD8-476F-B733-2FDCCE2BCAD6} = {BBC3E5C5-6E08-4E0C-9182-4C719212B8B5}
 		{2A91529D-BCA2-4ADA-B394-4F01F2496422} = {BBC3E5C5-6E08-4E0C-9182-4C719212B8B5}
 		{A6ABB6C4-CCAA-4ED6-ACBA-BE3DD94683E7} = {4159BBD1-F20C-40A4-8C95-18E20B9CA7D9}

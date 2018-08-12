@@ -1,13 +1,19 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <CodeAnalysisRuleSet>../../project.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
-
+  <ItemGroup>
+    <AdditionalFiles Include="../../stylecop.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="StyleCop.Analyzers" Version="1.1.0-beta008" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\common\arkano.common.configuration\arkano.common.configuration.csproj" />
     <ProjectReference Include="..\..\common\arkano.common.domain\arkano.common.domain.csproj" />
-    <ProjectReference Include="..\..\common\arkano.common.models\arkano.common.interfaces.csproj" />
+    <ProjectReference Include="..\..\common\arkano.common.interfaces\arkano.common.interfaces.csproj" />
   </ItemGroup>
 
 </Project>

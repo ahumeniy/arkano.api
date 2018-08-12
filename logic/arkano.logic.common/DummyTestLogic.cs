@@ -1,14 +1,11 @@
-﻿using arkano.common.domain;
-using arkano.data.interfaces;
-using arkano.data.repositories.Base;
-using arkano.logic.common.Base;
-using arkano.logic.common.Factories;
-using arkano.logic.interfaces;
-using System;
-using System.Threading.Tasks;
-
-namespace arkano.logic.common
+﻿namespace arkano.logic.common
 {
+    using System.Threading.Tasks;
+    using arkano.common.domain;
+    using arkano.data.repositories.Base;
+    using arkano.logic.common.Base;
+    using arkano.logic.interfaces;
+
     public class DummyTestLogic : BaseLogic<DummyTestModel>
     {
         public DummyTestLogic() : base(new BaseRepository<DummyTestModel>())
@@ -22,7 +19,7 @@ namespace arkano.logic.common
 
         public override Task New(DummyTestModel model)
         {
-            ILogic<OtroDummyTestModel> logic2 = this.factoryOtroDummyTestModel.GetLogic(this.Context);
+            ILogic<OtroDummyTestModel> logic2 = this.FactoryOtroDummyTestModel.GetLogic(this.Context);
             return base.New(model);
         }
     }
