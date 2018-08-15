@@ -24,8 +24,6 @@
 
         public override Task New(Course model)
         {
-            this.GetModelContext<Student>().Add(new Student());
-
             // Here is how someone could get other repo instance using the same EfContext
             this.GetModelRepo<Student, StudentRepository>().DoLalaStudent();
             return base.New(model);

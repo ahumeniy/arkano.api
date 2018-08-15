@@ -7,12 +7,14 @@
     using arkano.common.interfaces;
     using arkano.logic.common.Factories;
     using arkano.logic.interfaces;
+    using Microsoft.AspNet.OData;
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.Extensions.Logging;
 
     [Route("api/[controller]")]
+    [EnableQuery]
     [ApiController]
-    public abstract class BaseController<TModel, TBLogic> : ControllerBase
+    public abstract class BaseController<TModel, TBLogic> : ODataController
         where TModel : class, IModel, new()
         where TBLogic : ILogic<TModel>, new()
     {
@@ -26,7 +28,7 @@
 
         protected ILogicFactory<TModel> LogicFactory { get; }
 
-        // GET: api/Base
+        // GET: api/Base       
         [HttpGet]
         public Task<IList<TModel>> Get()
         {

@@ -17,7 +17,7 @@
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             // TODO: See were this should be taken I gues from Tenant but I'm not sure
-            optionsBuilder.UseSqlServer(@"Data Source=.\SQLEXPRESS17;Persist Security Info=True;User ID=sa;Password=XxXxX;Initial Catalog=DummyTestDb");
+            optionsBuilder.UseSqlServer(@"Data Source=.\SQLEXPRESS17;Persist Security Info=True;User ID=sa;Password=Milo2017;Initial Catalog=DummyTestDb");
 
             // This enable lazyLoad of navigation properties. Navigation properties must be set as virtual in order to get it working
             optionsBuilder.UseLazyLoadingProxies();
