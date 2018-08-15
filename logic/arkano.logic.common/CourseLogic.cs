@@ -1,13 +1,15 @@
 ﻿namespace arkano.logic.common
 {
+    using System.Threading.Tasks;
     using arkano.common.domain;
     using arkano.data.repositories.Base;
     using arkano.data.repositories.DummyTest;
     using arkano.logic.common.Base;
+    using arkano.logic.interfaces;
 
-    public class OtroDummyTestLogic : BaseLogic<OtroDummyTestModel>
+    public class CourseLogic : BaseLogic<Course>
     {
-        public OtroDummyTestLogic() : base(new OtroDummyTestRepository())
+        public CourseLogic() : base(new CourseRepository())
         {
         }
     }

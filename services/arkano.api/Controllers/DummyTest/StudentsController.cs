@@ -5,10 +5,10 @@
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.Extensions.Logging;
 
-    public class DummyTestController : Base.BaseController<DummyTestModel, DummyTestLogic>
+    public class StudentsController : Base.BaseController<Student, StudentLogic>
     {
         // Extend controller here
-        public DummyTestController(ILogger<object> logger) : base(logger)
+        public StudentsController(ILogger<object> logger) : base(logger)
         {
         }
     }

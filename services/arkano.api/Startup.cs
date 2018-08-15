@@ -34,7 +34,9 @@
             services.AddCors();
             services.AddOptions();
             services.Configure<TenantsConfiguration>(this.TenantConfiguration);
-            services.AddMvc();
+            services.AddMvc()
+                .AddJsonOptions(                    
+                    options => options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore); // To avoid reference loops in api responses serealization 
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

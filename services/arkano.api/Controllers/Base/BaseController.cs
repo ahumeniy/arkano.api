@@ -13,7 +13,7 @@
     [Route("api/[controller]")]
     [ApiController]
     public abstract class BaseController<TModel, TBLogic> : ControllerBase
-        where TModel : class, IModel
+        where TModel : class, IModel, new()
         where TBLogic : ILogic<TModel>, new()
     {
         public BaseController(ILogger<object> logger)
@@ -33,12 +33,20 @@
             return this.GetLogic().All();
         }
 
-        // GET: api/Base/5
-        [HttpGet("{id}", Name = "Get")]
-        public Task<TModel> Get(int id)
-        {
-            return this.GetLogic().Get(id);
-        }
+        // [HttpGet]
+        // [ActionName("GetLala")]
+        // public Task<TModel> GetLala()
+        // {
+        //    return Task.FromResult(new TModel());// this.GetLogic().All();
+        // }        
+
+        // TODO: See why with this method routes addresses Get() and Get(int id) as same
+        //// GET: api/Base/5
+        // [HttpGet("{id}", Name = "Get")]
+        // public Task<TModel> Get(int id)
+        // {
+        //    return this.GetLogic().Get(id);
+        // }
 
         // POST: api/Base
         [HttpPost]

@@ -1,9 +1,13 @@
 ﻿namespace arkano.common.interfaces
 {
+    // http://www.entityframeworktutorial.net/code-first/foreignkey-dataannotations-attribute-in-code-first.aspx
+    using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations.Schema;
+
     public interface IModel
     {
-        string Id { get; set; }
-
-        string Name { get; set; }
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        int Id { get; set; }
     }
 }

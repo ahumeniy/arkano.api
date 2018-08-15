@@ -1,6 +1,8 @@
 ﻿namespace arkano.logic.interfaces
 {
+    using System;
     using System.Collections.Generic;
+    using System.Linq.Expressions;
     using System.Threading.Tasks;
     using arkano.common.configuration;
     using arkano.common.domain;
@@ -19,12 +21,24 @@
 
         Task<IList<TModel>> All();
 
-        Task<TModel> Get(int id);
+        Task<TModel> FindByKey(TModel pksModel);
+
+        Task<TModel> FindByKey(params object[] prms);
+
+        Task<IList<TModel>> Where(Expression<Func<TModel, bool>> predicate);
+
+        Task<TModel> FirstOrDefault(Expression<Func<TModel, bool>> predicate);
+
+        Task<TModel> LastOrDefault(Expression<Func<TModel, int>> keySelector, Expression<Func<TModel, bool>> predicate);
+
+        Task<TModel> SingleOrDefault(Expression<Func<TModel, bool>> predicate);
 
         Task New(TModel model);
 
         Task Update(TModel model);
 
-        Task Delete(int id);
+        Task Delete(TModel model);
+
+        Task Delete(params object[] prms);
     }
 }

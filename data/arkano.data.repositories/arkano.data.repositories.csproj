@@ -11,6 +11,8 @@
     <PackageReference Include="StyleCop.Analyzers" Version="1.1.0-beta008" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\common\arkano.common.domain\arkano.common.domain.csproj" />
+    <ProjectReference Include="..\arkano.data.daccess\arkano.data.daccess.csproj" />
     <ProjectReference Include="..\arkano.data.interfaces\arkano.data.interfaces.csproj" />
   </ItemGroup>
 
