@@ -3,7 +3,6 @@
     using arkano.api.Infrastructure.Extensions;
     using arkano.api.Models.Implementations;
     using arkano.common.domain;
-    using arkano.data.daccess.Context;
     using Microsoft.AspNet.OData.Builder;
     using Microsoft.AspNet.OData.Extensions;
     using Microsoft.AspNetCore.Builder;
@@ -41,7 +40,6 @@
             services.Configure<TenantsConfiguration>(this.TenantConfiguration);
 
             // https://blogs.msdn.microsoft.com/odatateam/2018/07/03/asp-net-core-odata-now-available/
-            services.AddDbContext<ArkanoEfContext>();
             services.AddOData();
             services.AddMvc()
                 .AddJsonOptions(                    
