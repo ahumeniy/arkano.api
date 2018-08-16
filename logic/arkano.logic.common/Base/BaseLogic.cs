@@ -30,9 +30,9 @@
 
         protected IRepository<TModel> Repository { get; }
 
-        public virtual Task<IList<TModel>> All()
+        public virtual Task<IQueryable<TModel>> All()
         {
-            return Task.FromResult((IList<TModel>)this.Repository.All().Result.ToList());
+            return this.Repository.All();
         }
 
         public virtual Task Delete(TModel model)
@@ -101,9 +101,9 @@
             return result;
         }
 
-        public virtual Task<IList<TModel>> Where(Expression<Func<TModel, bool>> predicate)
+        public virtual Task<IQueryable<TModel>> Where(Expression<Func<TModel, bool>> predicate)
         {
-            return Task.FromResult((IList<TModel>)this.Repository.Where(predicate).Result.ToList());
+            return this.Repository.Where(predicate);
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿namespace arkano.api.Controllers.Base
 {
     using System.Collections.Generic;
+    using System.Linq;
     using System.Threading.Tasks;
     using arkano.api.Models.Interfaces;
     using arkano.common.configuration;
@@ -30,7 +31,7 @@
 
         // GET: api/Base       
         [HttpGet]
-        public Task<IList<TModel>> Get()
+        public Task<IQueryable<TModel>> Get()
         {
             return this.GetLogic().All();
         }
