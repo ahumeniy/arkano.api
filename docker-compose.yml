@@ -5,4 +5,4 @@ services:
     image: arkanoapi
     build:
       context: .
-      dockerfile: arkano.api/services/Dockerfile
+      dockerfile: arkano.api/services/arkano.api/Dockerfile
