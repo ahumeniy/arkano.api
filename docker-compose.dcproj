@@ -3,7 +3,7 @@
   <PropertyGroup Label="Globals">
     <ProjectVersion>2.1</ProjectVersion>
     <DockerTargetOS>Linux</DockerTargetOS>
-    <ProjectGuid>1cd3443c-8fe8-4d21-a4d6-9c4be2360be4</ProjectGuid>
+    <ProjectGuid>05c2fab1-8d84-45ad-93b1-09b0c8ca4aef</ProjectGuid>
     <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
     <DockerServiceUrl>{Scheme}://localhost:{ServicePort}</DockerServiceUrl>
     <DockerServiceName>arkano.api</DockerServiceName>

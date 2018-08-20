@@ -2,7 +2,7 @@ version: '3.4'
 
 services:
   arkano.api:
-    image: arkanoapi
+    image: ${DOCKER_REGISTRY}arkanoapi
     build:
       context: .
       dockerfile: services/arkano.api/Dockerfile
